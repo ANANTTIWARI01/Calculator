@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="wrapper">
+        <input id="firstn" type="text" placeholder="First-Number">
+        <select name="" id="choose">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option  value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input id="secondn" type="text" placeholder="Second-Number">
+        <br>
+        <input id="result" type="text" placeholder="Answer">
+        
+        <div id="btn">
+            <button onclick="addnumbers()">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+
+let fn = document.querySelector("#firstn")
+let sn = document.querySelector("#secondn")
+let r = document.querySelector("#result")
+let Choose = document.querySelector("#choose")
+
+function addnumbers(){
+let num1 =Number(fn.value)
+let num2 =Number(sn.value)
+
+if(Choose.value === "+"){
+    r.value = num1+num2
+}
+else if(Choose.value === "-"){
+    r.value = num1 -num2
+}
+
+else if(Choose.value === "*"){
+    r.value = num1 *num2
+}
+else if(Choose.value === "/"){
+    r.value = num1 /num2
+}
+else if(Choose.value === "%"){
+    r.value = num1 %num2
+}
+
+}
+
+</script>
+</html>
